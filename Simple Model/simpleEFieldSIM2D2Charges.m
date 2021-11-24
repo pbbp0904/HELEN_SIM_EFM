@@ -1,5 +1,5 @@
 q1 = 40;
-q2 = -40;
+q2 = -30;
 
 x1 = 0;
 x2 = 0;
@@ -44,7 +44,7 @@ E_z = E_z1 + E_z2 + E_z1p + E_z2p;
 E_t = sqrt(E_x.^2+E_z.^2);
 
 
-VThreshold = 10000;
+VThreshold = inf;
 E_x(E_x>VThreshold) = VThreshold;
 E_x(E_x<-VThreshold) = -VThreshold;
 

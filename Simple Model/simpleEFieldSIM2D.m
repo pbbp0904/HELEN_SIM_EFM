@@ -20,6 +20,7 @@ x = -20000:100:20000;
 y = 0;
 z = (0:100:30000)';
 
+
 E_x1 = q1*(x-x1)./(4*pi*e1*((x-x1).^2+(y-y1).^2+(z-z1).^2).^(3/2));
 E_x2 = q2*(x-x2)./(4*pi*e2*((x-x2).^2+(y-y2).^2+(z-z2).^2).^(3/2));
 E_x3 = q3*(x-x3)./(4*pi*e3*((x-x3).^2+(y-y3).^2+(z-z3).^2).^(3/2));
@@ -55,15 +56,15 @@ E_z = E_z1 + E_z2 + E_z3 + E_z1p + E_z2p + E_z3p;
 E_t = sqrt(E_x.^2+E_z.^2);
 
 
-VThreshold = 10000;
-E_x(E_x>VThreshold) = VThreshold;
-E_x(E_x<-VThreshold) = -VThreshold;
-
-E_z(E_z>VThreshold) = VThreshold;
-E_z(E_z<-VThreshold) = -VThreshold;
-
-E_t(E_t>sqrt(2)*VThreshold) = sqrt(2)*VThreshold;
-E_t(E_t<-sqrt(2)*VThreshold) = -sqrt(2)*VThreshold;
+% VThreshold = inf;
+% E_x(E_x>VThreshold) = VThreshold;
+% E_x(E_x<-VThreshold) = -VThreshold;
+% 
+% E_z(E_z>VThreshold) = VThreshold;
+% E_z(E_z<-VThreshold) = -VThreshold;
+% 
+% E_t(E_t>sqrt(2)*VThreshold) = sqrt(2)*VThreshold;
+% E_t(E_t<-sqrt(2)*VThreshold) = -sqrt(2)*VThreshold;
 
 
 figure()
