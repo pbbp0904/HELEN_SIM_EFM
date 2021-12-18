@@ -28,7 +28,7 @@ vSim = v;
 
 %% Calculating electric field from data
 disp('Calculating electric field...');
-eCalc = [eCalc; calculateEField1Ax(v, a, m, Ks)];
+eCalc = [eCalc; calculateEField3Ax(v, a, m, Ks)];
 
 %% Compare the simulation with the calculated results
 disp('Comparing calculations to simulation...');

@@ -56,15 +56,15 @@ E_z = E_z1 + E_z2 + E_z3 + E_z1p + E_z2p + E_z3p;
 E_t = sqrt(E_x.^2+E_z.^2);
 
 
-% VThreshold = inf;
-% E_x(E_x>VThreshold) = VThreshold;
-% E_x(E_x<-VThreshold) = -VThreshold;
-% 
-% E_z(E_z>VThreshold) = VThreshold;
-% E_z(E_z<-VThreshold) = -VThreshold;
-% 
-% E_t(E_t>sqrt(2)*VThreshold) = sqrt(2)*VThreshold;
-% E_t(E_t<-sqrt(2)*VThreshold) = -sqrt(2)*VThreshold;
+VThreshold = 10000;
+E_x(E_x>VThreshold) = VThreshold;
+E_x(E_x<-VThreshold) = -VThreshold;
+
+E_z(E_z>VThreshold) = VThreshold;
+E_z(E_z<-VThreshold) = -VThreshold;
+
+E_t(E_t>sqrt(2)*VThreshold) = sqrt(2)*VThreshold;
+E_t(E_t<-sqrt(2)*VThreshold) = -sqrt(2)*VThreshold;
 
 
 figure()
